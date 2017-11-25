@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Desafio com contas matemáticas">
+
+	
+	<link rel="stylesheet" href="css/main.css">
+
+	<title>Desafio Matematico</title>
+</head>
+<body>
+	<section>
+		<div class="welcome">
+			<div class="welcome-open-text">
+				<h1>Bem vindo ao Desafio Matemático</h1>
+				<h2>Um jogo para testar, treinar e aprimorar os seus conhecimentos</h2>
+			</div>
+			<div class="welcome-form">
+				<div class="welcome-form-header">
+					<h2>Antes de iniciarmos, algumas perguntas breves.</h2>
+				</div>
+				<div class="welcome-form-name-wrap">
+					<label>Digite o seu nome</label>
+					<input type="text" id="form-name" placeholder="(ex.: SOPHIA)">
+				</div>
+				<div class="welcome-form-age-wrap">
+					<label>Digite a sua idade</label>
+					<input type="number" id="form-age" placeholder="(ex.: 7)">
+				</div>
+				<div class="welcome-form-age-restriction">
+					<small id="age-restriction-text">(jogo para crianças com 6+ anos)</small>
+				</div>
+				<div class="welcome-go-forward-wrap" onclick="welcome_forward('form-age','age-restriction-text', 'avancar-pagina','welcome', 'choose-operation', 'form-name', 'choose-operation-header-name')">
+					<div class="welcome-go-forward-bt">
+						<input type="image" id="avancar-pagina" src="assets/go_forward.png">
+					</div>
+					<br>
+					<label>Avançar</label>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="choose-operation">
+			<div class="choose-operation-header">
+				<h1>
+					<label id="choose-operation-header-name"></label>
+					<label>, você gostaria de treinar alguma operação específica?</label>
+				</h1>
+				<h2>Caso <b><span>sim</span></b>, clique na imagem que representa ela. Do contrário, selecione o modo aleatório.</h2>
+			</div>
+			<div class="choose-operation-main">
+				<ul>
+					<li onmouseover="menu_hover_on('addition')" onmouseout="menu_hover_off('addition')" onclick="signals_forward(0, 'choose-operation', 'level-bg')">
+						<input type="image" class="operation-signals" src="assets/sum.png">
+						<div class="operation-addition" id="addition">
+							<h1>Adição</h1>
+							<p>A adição combina dois números, em um único número, chamado soma ou total. É um exemplo desta operação: 10 + 10 = 20</p>
+						</div>
+					</li>
+					<li onmouseover="menu_hover_on('subtraction')" onmouseout="menu_hover_off('subtraction')" onclick="signals_forward(1, 'choose-operation', 'level-bg')">
+						<input type="image" class="operation-signals" src="assets/sub.png">
+						<div class="operation-subtraction" id="subtraction">
+							<h1>Subtração</h1>
+							<p>Operação que, dados dois números, visa achar a quantidade pela qual um excede o outro. Exemplo: 1 - 1 = 0</p>
+						</div>
+					</li>
+					<li onmouseover="menu_hover_on('multiplication')" onmouseout="menu_hover_off('multiplication')" onclick="signals_forward(2, 'choose-operation', 'level-bg')">
+						<input type="image" class="operation-signals" src="assets/mult.png">
+						<div class="operation-multiplication" id="multiplication">
+							<h1>Multiplicação</h1>
+							<p>Operação com a finalidade de somar um número tantas vezes quantas forem as unidades do outro. Exemplo: 2 x 2 = 4</p>
+						</div>
+					</li>
+					<li onmouseover="menu_hover_on('random')" onmouseout="menu_hover_off('random')" onclick="signals_forward(3, 'choose-operation', 'level-bg')">
+						<input type="image" class="operation-signals" src="assets/random.png">
+						<div class="operation-random" id="random">
+							<h1>Aleatório</h1>
+							<p>Operações envolvendo três das operações básicas da matemática: a adição, a subtração e a multiplicação. </p>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section>
+		<div class="level-bg">
+			<div class="level-menu">
+				<div class="level-menu-bg">		
+					<div class="level-menu-header">
+						<h1>DESAFIO MATEMÁTICO</h1>
+					</div>
+					<div class="level-menu-buttons">
+						<ul>
+							<li onmouseover="menu_hover_on('menu-hover-iniciante')" onmouseout="menu_hover_off('menu-hover-iniciante')" onclick="level_forward(0,'level-bg', 'challenge')">
+								<input type="image" id="menu-iniciante" src="assets/badge.png">
+							</li>
+							<li onmouseover="menu_hover_on('menu-hover-intermediario')" onmouseleave="menu_hover_off('menu-hover-intermediario')" onclick="level_forward(1,'level-bg', 'challenge')">
+								<input type="image" id="menu-intermediario" src="assets/badge2.png">
+							</li>
+							<li onmouseover="menu_hover_on('menu-hover-avancado')" onmouseout="menu_hover_off('menu-hover-avancado')" onclick="level_forward(2,'level-bg', 'challenge')">
+								<input type="image" id="menu-avancado" src="assets/badge3.png">
+							</li>
+						</ul>
+					</div>
+					<div class="level-menu-button-hover">
+						<div class="level-menu-button-hover" id="menu-hover-iniciante">
+							<h1>Iniciante</h1>
+							<p>Operação escolhida (específica ou aleatória) com números entre 0 e 9. Inicie por aqui! =)</p>
+						</div>
+						<div class="level-menu-button-hover" id="menu-hover-intermediario">
+							<h1>Intermediário</h1>
+							<p>Operação escolhida (específica ou aleatória) com números entre de 0 a 20.</p>
+						</div>
+						<div class="level-menu-button-hover" id="menu-hover-avancado">
+							<h1>Avançado</h1>
+							<p>Operações escolhida (específica ou aleatória) com números entre de 0 a 50.</p>
+						</div>
+					</div>
+						<div class="level-menu-footer">
+					</div>
+				</div>
+			</div>	
+		</div>
+	</section>
+	<section>
+		<div class="challenge">
+			<div class="challenge-header">
+				<h1>DESAFIO MATEMÁTICO</h1>
+			</div>
+			<div class="challenge-main">
+				<div class="challenge-main-operation">
+					<div class="challenge-main-operation-n1-wrap">
+						<input type="checkbox" class="challenge-main-operation-checkbox-n1">
+						<input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="number1-value" class="analyze" placeholder="00" readonly="readonly">
+					</div>
+					<label class="challenge-main-operation-sign" id="challenge-sign">+</label>
+					<div class="challenge-main-operation-n2-wrap">
+						<input type="checkbox" class="challenge-main-operation-checkbox-n2">
+						<input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="number2-value" class="analyze" placeholder="00" readonly="readonly">
+					</div>
+					<label class="challenge-main-operation-equal">=</label>
+					<div class="challenge-main-operation-equal-wrap">
+						<input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="result-value" class="analyze" placeholder="00" readonly="readonly">
+					</div>
+				</div>
+				<div class="challenge-score">
+					<div class="challenge-score-positive-wrap">
+						<img src="assets/right.png" alt="right">
+						<label id="positive-text">Acertos =</label>
+						<label id="positve-number">00</label>
+ 					</div>
+					<div class="challenge-score-negative-wrap">
+						<img src="assets/wrong.png" alt="wrong">
+						<label id="negative-text">Erros =</label>
+						<label id="negative-number">00</label>
+					</div>
+					<div class="challenge-score-total-wrap">
+						<img src="assets/equal.png" alt="equal">
+						<label id="total-text">Total =</label>
+						<label id="total-number">00</label>
+					</div>
+				</div>
+			</div>
+			<div class="challenge-bottom">
+			</div>
+			<div class="challenge-timer">
+				<img src="assets/alarm-clock.png">
+				<label>30</label>
+			</div>
+			<div class="challenge-countdown">
+				<label>Início em</label>
+				<br>
+				<label class="challenge-countdown-label" id="countdown-value">5</label>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<ul class="challenge-footer">
+			<li id="challenge-footer-iniciante"></li>
+			<li id="challenge-footer-intermediario"></li>
+			<li id="challenge-footer-avancado"></li>
+		</ul>
+	</footer>
+</body>
+<script type="text/javascript" src="js/script_layout.js" ></script>
+<script type="text/javascript" src="js/script_game.js" ></script>
+</html>

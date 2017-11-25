@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css?family=Asap:400,700");
+* {
+  box-sizing: border-box;
+  margin: 0 auto; }
+
+.welcome {
+  padding-bottom: 6rem;
+  background-color: #f8cd76; }
+  .welcome .welcome-open-text {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 10.5rem; }
+    .welcome .welcome-open-text h1 {
+      font-family: "Asap", sans-serif;
+      color: #ff6633;
+      font-size: 4rem;
+      font-weight: 700; }
+    .welcome .welcome-open-text h2 {
+      font-family: "Asap", sans-serif;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 400; }
+  .welcome .welcome-form {
+    text-align: center; }
+    .welcome .welcome-form .welcome-form-header {
+      margin-bottom: 4rem; }
+      .welcome .welcome-form .welcome-form-header h2 {
+        font-family: "Asap", sans-serif;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700; }
+    .welcome .welcome-form .welcome-form-name-wrap {
+      margin-bottom: 2rem; }
+    .welcome .welcome-form .welcome-form-name-wrap, .welcome .welcome-form .welcome-form-age-wrap {
+      padding-left: 4rem; }
+      .welcome .welcome-form .welcome-form-name-wrap label, .welcome .welcome-form .welcome-form-age-wrap label {
+        color: white;
+        font-family: "Asap", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 400;
+        margin-right: 1rem; }
+      .welcome .welcome-form .welcome-form-name-wrap input, .welcome .welcome-form .welcome-form-age-wrap input {
+        width: 15rem;
+        border: none;
+        border-bottom: 0.3rem solid #eb4a97;
+        border-radius: 5%;
+        background: none;
+        color: #eb4a97;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 600;
+        font-family: "Asap", sans-serif; }
+      .welcome .welcome-form .welcome-form-name-wrap input:focus, .welcome .welcome-form .welcome-form-age-wrap input:focus {
+        outline: none; }
+      .welcome .welcome-form .welcome-form-name-wrap input::-webkit-input-placeholder, .welcome .welcome-form .welcome-form-age-wrap input::-webkit-input-placeholder {
+        /* WebKit browsers */
+        font-size: 1.1rem;
+        text-align: center;
+        color: white; }
+      .welcome .welcome-form .welcome-form-name-wrap input::-moz-placeholder, .welcome .welcome-form .welcome-form-age-wrap input::-moz-placeholder {
+        /* Firefox */
+        font-size: 1.1rem;
+        text-align: center;
+        color: white; }
+    .welcome .welcome-form .welcome-form-age-restriction {
+      margin-left: 15rem;
+      display: inline-block; }
+      .welcome .welcome-form .welcome-form-age-restriction small {
+        font-family: "Asap", sans-serif;
+        color: white; }
+  .welcome .welcome-go-forward-wrap {
+    margin-top: 6rem;
+    padding-bottom: 3rem; }
+    .welcome .welcome-go-forward-wrap .welcome-go-forward-bt {
+      display: inline-block;
+      background-color: white;
+      padding: 0% 0.25%;
+      border-radius: 100%; }
+    .welcome .welcome-go-forward-wrap label {
+      font-family: "Asap", sans-serif;
+      color: white;
+      font-size: 1rem;
+      font-weight: 600; }
+
+.choose-operation {
+  background-color: #ff6633;
+  padding-bottom: 13rem;
+  display: none; }
+  .choose-operation .choose-operation-header {
+    padding-top: 4rem;
+    padding-bottom: 12rem;
+    margin-left: 2rem;
+    text-align: center; }
+    .choose-operation .choose-operation-header h1 {
+      font-family: "Asap", sans-serif;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem; }
+      .choose-operation .choose-operation-header h1 #choose-operation-header-name {
+        text-transform: uppercase; }
+    .choose-operation .choose-operation-header h2 {
+      font-family: "Asap", sans-serif;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: 400; }
+      .choose-operation .choose-operation-header h2 span {
+        border-bottom: 0.4rem solid #f8cd76;
+        border-radius: 15%;
+        padding-bottom: 0.1rem; }
+  .choose-operation .choose-operation-main {
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+    .choose-operation .choose-operation-main input {
+      width: 65%; }
+    .choose-operation .choose-operation-main ul li {
+      display: inline-block; }
+    .choose-operation .choose-operation-main li {
+      margin-left: 6rem; }
+    .choose-operation .choose-operation-main .operation-addition, .choose-operation .choose-operation-main .operation-subtraction, .choose-operation .choose-operation-main .operation-multiplication, .choose-operation .choose-operation-main .operation-random {
+      visibility: hidden;
+      margin-top: 1rem;
+      width: 12rem; }
+      .choose-operation .choose-operation-main .operation-addition h1, .choose-operation .choose-operation-main .operation-subtraction h1, .choose-operation .choose-operation-main .operation-multiplication h1, .choose-operation .choose-operation-main .operation-random h1 {
+        font-family: "Asap", sans-serif;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 1rem; }
+      .choose-operation .choose-operation-main .operation-addition p, .choose-operation .choose-operation-main .operation-subtraction p, .choose-operation .choose-operation-main .operation-multiplication p, .choose-operation .choose-operation-main .operation-random p {
+        font-family: "Asap", sans-serif;
+        color: white;
+        font-size: 1rem;
+        font-weight: 400; }
+
+.level-bg {
+  width: 100%;
+  background-color: #f8cd76;
+  padding-bottom: 3rem;
+  display: none; }
+  .level-bg .level-menu {
+    width: 80%;
+    margin: 0 auto;
+    padding: 6rem 10rem; }
+    .level-bg .level-menu .level-menu-bg {
+      border-radius: 5%;
+      margin: 0 auto;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-image: url("../assets/bg_math.jpg");
+      background-position: center;
+      background-size: contain; }
+      .level-bg .level-menu .level-menu-bg .level-menu-header {
+        display: inline-block;
+        margin: 0 auto;
+        font-family: "Asap", sans-serif;
+        color: #f8cd76;
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 3rem; }
+      .level-bg .level-menu .level-menu-bg .level-menu-buttons {
+        display: inline;
+        list-style: none; }
+        .level-bg .level-menu .level-menu-bg .level-menu-buttons #menu-iniciante {
+          width: 12.7%;
+          height: 12.7%;
+          margin-right: 11%; }
+          .level-bg .level-menu .level-menu-bg .level-menu-buttons #menu-iniciante :hover ~ .level-menu-button-hover {
+            display: inline-block; }
+        .level-bg .level-menu .level-menu-bg .level-menu-buttons #menu-intermediario {
+          width: 25%;
+          height: 25%;
+          margin-right: 11%; }
+        .level-bg .level-menu .level-menu-bg .level-menu-buttons #menu-avancado {
+          width: 35%;
+          height: 35%; }
+        .level-bg .level-menu .level-menu-bg .level-menu-buttons ul li {
+          display: inline; }
+      .level-bg .level-menu .level-menu-bg .level-menu-button-hover {
+        margin: 0 auto;
+        padding: 1rem; }
+        .level-bg .level-menu .level-menu-bg .level-menu-button-hover .level-menu-button-hover {
+          visibility: hidden;
+          display: inline-block;
+          width: 32%;
+          border-radius: 10%;
+          margin-left: auto;
+          margin-right: auto;
+          padding: 3%;
+          color: white;
+          font-family: "Asap", sans-serif;
+          text-align: center;
+          background-color: rgba(255, 102, 51, 0.6); }
+          .level-bg .level-menu .level-menu-bg .level-menu-button-hover .level-menu-button-hover h1 {
+            line-height: 3rem; }
+        .level-bg .level-menu .level-menu-bg .level-menu-button-hover #menu-hover-iniciante {
+          margin-left: 0.5rem; }
+
+.challenge {
+  width: 100%;
+  background-color: #f8cd76;
+  padding-bottom: 10.5rem;
+  display: none; }
+  .challenge .challenge-header {
+    display: inline-block;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 8rem; }
+    .challenge .challenge-header h1 {
+      font-family: "Asap", sans-serif;
+      color: #ff6633;
+      font-size: 2.5rem;
+      font-weight: 700; }
+  .challenge .challenge-main-operation {
+    text-align: center;
+    padding-bottom: 10rem; }
+    .challenge .challenge-main-operation .challenge-main-operation-n1-wrap, .challenge .challenge-main-operation .challenge-main-operation-n2-wrap, .challenge .challenge-main-operation .challenge-main-operation-equal-wrap {
+      display: inline-block;
+      margin-left: 3rem; }
+      .challenge .challenge-main-operation .challenge-main-operation-n1-wrap input[type="number"], .challenge .challenge-main-operation .challenge-main-operation-n2-wrap input[type="number"], .challenge .challenge-main-operation .challenge-main-operation-equal-wrap input[type="number"] {
+        width: 20rem;
+        height: 10rem;
+        border: none;
+        border-bottom: 0.7rem solid white;
+        border-radius: 3%;
+        background: none;
+        color: #eb4a97;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 8rem;
+        font-weight: 600;
+        font-family: "Asap", sans-serif;
+        margin-left: 1rem; }
+      .challenge .challenge-main-operation .challenge-main-operation-n1-wrap input:focus, .challenge .challenge-main-operation .challenge-main-operation-n2-wrap input:focus, .challenge .challenge-main-operation .challenge-main-operation-equal-wrap input:focus {
+        outline: none; }
+      .challenge .challenge-main-operation .challenge-main-operation-n1-wrap input::-webkit-input-placeholder, .challenge .challenge-main-operation .challenge-main-operation-n2-wrap input::-webkit-input-placeholder, .challenge .challenge-main-operation .challenge-main-operation-equal-wrap input::-webkit-input-placeholder {
+        font-size: 8rem;
+        text-align: center;
+        color: #eb4a97; }
+      .challenge .challenge-main-operation .challenge-main-operation-n1-wrap input::-moz-placeholder, .challenge .challenge-main-operation .challenge-main-operation-n2-wrap input::-moz-placeholder, .challenge .challenge-main-operation .challenge-main-operation-equal-wrap input::-moz-placeholder {
+        /* Firefox */
+        font-size: 8rem;
+        text-align: center;
+        color: #eb4a97; }
+    .challenge .challenge-main-operation .challenge-main-operation-sign, .challenge .challenge-main-operation .challenge-main-operation-equal {
+      font-family: "Asap", sans-serif;
+      color: #eb4a97;
+      font-size: 6rem;
+      font-weight: 700;
+      padding-left: 3rem; }
+  .challenge .challenge-score {
+    display: block; }
+    .challenge .challenge-score .challenge-score-positive-wrap, .challenge .challenge-score .challenge-score-negative-wrap, .challenge .challenge-score .challenge-score-total-wrap {
+      padding-left: 15%; }
+      .challenge .challenge-score .challenge-score-positive-wrap img, .challenge .challenge-score .challenge-score-negative-wrap img, .challenge .challenge-score .challenge-score-total-wrap img {
+        width: 4%;
+        background-color: white;
+        border-radius: 50%;
+        padding: 0.5rem;
+        margin-right: 1rem;
+        margin-bottom: 1.15rem; }
+      .challenge .challenge-score .challenge-score-positive-wrap label, .challenge .challenge-score .challenge-score-negative-wrap label, .challenge .challenge-score .challenge-score-total-wrap label {
+        font-family: "Asap", sans-serif;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 400;
+        vertical-align: 100%; }
+  .challenge .challenge-timer {
+    display: inline-block;
+    float: right;
+    position: absolute;
+    bottom: 0rem;
+    right: 0rem; }
+    .challenge .challenge-timer img {
+      display: inline-block;
+      width: 35%;
+      margin-right: 20%;
+      float: right; }
+    .challenge .challenge-timer label {
+      display: inline-block;
+      color: #ff6633;
+      font-family: "Asap", sans-serif;
+      font-size: 5rem;
+      font-weight: 700;
+      float: right;
+      margin-top: 4rem;
+      position: relative;
+      left: 25%; }
+  .challenge .challenge-countdown {
+    display: none;
+    text-align: center;
+    width: 35%;
+    height: 65%;
+    background-color: rgba(248, 205, 118, 0.9);
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    border: 3rem solid #e16633;
+    border-radius: 50%;
+    padding-top: 2rem; }
+    .challenge .challenge-countdown label {
+      color: white;
+      font-family: "Asap", sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      vertical-align: 40%; }
+    .challenge .challenge-countdown .challenge-countdown-label {
+      font-size: 15rem; }
+  .challenge .challenge-bottom {
+    height: 9rem; }
+
+.challenge-footer {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */
