@@ -204,7 +204,8 @@
   width: 100%;
   background-color: #f8cd76;
   padding-bottom: 10.5rem;
-  display: none; }
+  display: none;
+  position: relative; }
   .challenge .challenge-header {
     display: inline-block;
     padding-left: 2rem;
@@ -273,7 +274,7 @@
     display: inline-block;
     float: right;
     position: absolute;
-    bottom: 0rem;
+    bottom: 14.5rem;
     right: 0rem; }
     .challenge .challenge-timer img {
       display: inline-block;
@@ -290,11 +291,11 @@
       margin-top: 4rem;
       position: relative;
       left: 25%; }
-  .challenge .challenge-countdown {
+  .challenge .challenge-countdown, .challenge .multifunctional-div {
     display: none;
     text-align: center;
     width: 35%;
-    height: 65%;
+    height: 50%;
     background-color: rgba(248, 205, 118, 0.9);
     position: absolute;
     top: 15%;
@@ -302,13 +303,13 @@
     border: 3rem solid #e16633;
     border-radius: 50%;
     padding-top: 2rem; }
-    .challenge .challenge-countdown label {
+    .challenge .challenge-countdown label, .challenge .multifunctional-div label {
       color: white;
       font-family: "Asap", sans-serif;
       font-size: 3rem;
       font-weight: 700;
       vertical-align: 40%; }
-    .challenge .challenge-countdown .challenge-countdown-label {
+    .challenge .challenge-countdown .challenge-countdown-label, .challenge .challenge-countdown .multifunctional-div-text-bg, .challenge .multifunctional-div .challenge-countdown-label, .challenge .multifunctional-div .multifunctional-div-text-bg {
       font-size: 15rem; }
   .challenge .challenge-bottom {
     height: 9rem; }

@@ -306,6 +306,7 @@ $Asap:'Asap', sans-serif;
 	background-color: $cor-amarelo;
 	padding-bottom: 10.5rem;
 	display: none;
+	position: relative;
 
 	.challenge-header {
 		display: inline-block;
@@ -400,7 +401,7 @@ $Asap:'Asap', sans-serif;
 		display: inline-block;
 		float: right;
 		position: absolute;
-		bottom: 0rem;
+		bottom: 14.5rem;
 		right: 0rem;
 
 		img {
@@ -423,11 +424,11 @@ $Asap:'Asap', sans-serif;
 		}
 	}
 
-	.challenge-countdown {
+	.challenge-countdown, .multifunctional-div {
 		display: none;
 		text-align: center;
 		width: 35%;
-		height: 65%;
+		height: 50%;
 		background-color: rgba(248, 205, 118, 0.9);
 		position: absolute;
 		top: 15%;
@@ -444,7 +445,7 @@ $Asap:'Asap', sans-serif;
 			vertical-align: 40%;
 		}
 
-		.challenge-countdown-label {
+		.challenge-countdown-label, .multifunctional-div-text-bg {
 			font-size: 15rem;
 		}
 	}
