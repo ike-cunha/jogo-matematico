@@ -50,13 +50,9 @@ function start_countdown () {
 	if (time_left == 0) {
 		clearInterval(timer);
 		document.getElementsByClassName('challenge-countdown')[0].style.display = 'none'
-		setTimeout ('start_game()', 0);
+		setTimeout (game_level(), 0);
 	}else{
 		time_show.innerHTML = time_left;
 		time_left--
 	}
-}
-
-function start_game () {
-	game_level();
 }
