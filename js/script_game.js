@@ -2,11 +2,15 @@
 var operation_sign_input = 0;
 var correct_result = 0;
 
-//Variaveis da selecao de nível
+//Variáveis da selecao de nível
 var game_level_input, number1, number2, random_position, number_entered;
 var number1_value = document.getElementById('number1-value');
 var number2_value = document.getElementById('number2-value');
 var result_value = document.getElementById('result-value');
+
+//Variáveis para checkboxes
+var checkbox_n1 = document.getElementById('checkbox-n1');
+var checkbox_n2 = document.getElementById('checkbox-n2');
 
 //Variáveis do tempo da jogada
 var move_time = 5;
@@ -32,23 +36,27 @@ var analyze = document.getElementsByClassName("analyze");
 function game_level () {
 
 	move_time = 5;
-	
-	switch (game_level_input) {
-		case 0:
-			number1 = Math.floor(Math.random()*10);
-			number2 = Math.floor(Math.random()*10);
-			break;
-		case 1:
-			number1 = Math.floor(Math.random()*21);
-			number2 = Math.floor(Math.random()*21);
-			break;
-		case 2:
-			number1 = Math.floor(Math.random()*51);
-			number2 = Math.floor(Math.random()*51);
-			break;
-		default:
-			alert('Falha no sorteio dos números. Game level = ' + game_level_input);
-			break;
+
+	var multiplication;
+	checkbox_n1 = document.getElementById('checkbox-n1');
+	checkbox_n2 = document.getElementById('checkbox-n2');
+
+	if (game_level_input == 0) {
+		multiplication = 10;
+	}else if (game_level_input == 1) {
+		multiplication = 21;
+	}else if (game_level_input == 2) {
+		multiplication = 51;
+	}else{
+		alert('Erro no parâmetro de multiplicação');
+	}
+
+	if (checkbox_n1.checked == false) {
+		number1 = Math.floor(Math.random()*multiplication);
+	}
+
+	if (checkbox_n2.checked == false) {
+		number2 = Math.floor(Math.random()*multiplication);
 	}
 	operation_signal();
 }
@@ -98,8 +106,16 @@ function operation_signal () {
 }
 
 function organizing_the_game () {
+
+	var number_position
+
+	if (game_level_input == 0) {
+		number_position = 0
+	}else if (game_level_input == 1 || game_level_input == 2) {
+		number_position = 1
+	}
 	
-	switch (game_level_input) {
+	switch (number_position) {
 		case 0:
 			number1_value.value = number1;
 			number2_value.value = number2;
@@ -108,7 +124,18 @@ function organizing_the_game () {
 			insert_value_position = 0
 			break;
 		case 1:
-			random_position = Math.floor(Math.random()*3);
+			if (checkbox_n1.checked == true) {
+				random_position = Math.floor(Math.random()*2);
+			}else if (checkbox_n2.checked == true) {
+				var random_number = Math.floor(Math.random()*2)
+				if (random_number == 0) {
+					random_position = 0
+				}else if (random_number == 1) {
+					random_position = 2;
+				}
+			}else{
+				random_position = Math.floor(Math.random()*3);	
+			}
 			switch (random_position) {
 				case 0:
 					number1_value.value = number1;
@@ -136,35 +163,6 @@ function organizing_the_game () {
 					break;
 			}
 			break;
-		case 2:
-			var random_position = Math.floor(Math.random()*3);
-			switch (random_position) {
-				case 0:
-					number1_value.value = number1;
-					number2_value.value = number2;
-					result_value.placeholder = '';
-					result_value.readOnly = false;
-					insert_value_position = 0;
-					break;
-				case 1:
-					number1_value.value = number1;
-					number2_value.placeholder = '';
-					number2_value.readOnly = false;
-					insert_value_position = 2;
-					result_value.value = correct_result;
-					break;
-				case 2:
-					number1_value.placeholder = '';
-					number1_value.readOnly = false;
-					insert_value_position = 1;
-					number2_value.value = number2;
-					result_value.value = correct_result;
-					break;
-				default:
-					alert('Falha na organização do jogo. Game level = ' + game_level_input + '. Random = ' + random_position);
-					break;
-				}
-				break;
 		default:
 			alert('Falha (GERAL) na organização do jogo. Game level = ' + game_level_input + '. Random = ' + random_position);;
 			break;
