@@ -133,12 +133,12 @@
 			<div class="challenge-main">
 				<div class="challenge-main-operation">
 					<div class="challenge-main-operation-n1-wrap">
-						<input type="checkbox" class="challenge-main-operation-checkbox-n1">
+						<input type="checkbox" id="checkbox-n1" class="challenge-main-operation-checkbox-n1">
 						<input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" id="number1-value" class="analyze" placeholder="00" readonly="readonly">
 					</div>
 					<label class="challenge-main-operation-sign" id="challenge-sign">+</label>
 					<div class="challenge-main-operation-n2-wrap">
-						<input type="checkbox" class="challenge-main-operation-checkbox-n2">
+						<input type="checkbox" id="checkbox-n2" class="challenge-main-operation-checkbox-n2">
 						<input type="number" maxlength="4" oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength)" id="number2-value" class="analyze" placeholder="00" readonly="readonly">
 					</div>
 					<label class="challenge-main-operation-equal">=</label>
@@ -192,5 +192,4 @@
 </body>
 <script type="text/javascript" src="js/script_layout.js" ></script>
 <script type="text/javascript" src="js/script_game.js" ></script>
-<!-- <script type="text/javascript" src="js/script_game.js" ></script> -->
 </html>
